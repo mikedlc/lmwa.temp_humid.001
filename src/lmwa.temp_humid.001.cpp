@@ -25,8 +25,10 @@ Adafruit_SH1106G display = Adafruit_SH1106G(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, 
 DHT dht(DHTPIN, DHTTYPE);
 
 //Wifi Stuff
-#include <ESP8266WiFi.h>
-#include <PubSubClient.h>
+#include <ESP8266WiFi.h> // Uncomment for D1 Mini ESP8266
+#include <ESP8266mDNS.h> // Uncomment for D1 mini ES8266
+#include <WiFiUdp.h> // Uncomment for D1 Mini ESP8266
+//#include <WiFi.h> // Uncomment for ESP32
 const char *ssid =	"LMWA-PumpHouse";		// cannot be longer than 32 characters!
 const char *pass =	"ds42396xcr5";		//
 //const char *ssid =	"WiFiFoFum";		// cannot be longer than 32 characters!
