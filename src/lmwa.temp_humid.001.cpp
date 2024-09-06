@@ -17,7 +17,7 @@ const char* ProgramID = "LMWA.env.01";
 const char* SensorType = "LMWA.env.01";
 const char* mqtt_topic = "temperature/01";
 const char* mqtt_unit = "F";
-const char* mqtt_server_init = "192.168.30.121";
+const char* mqtt_server_init = "192.168.12.165";
 const char* mqtt_user = "mqttuser";
 const char* mqtt_password = "Lafayette123!";
 
@@ -312,7 +312,7 @@ void loop() {
   display.print(uptimeTotal);
   display.display();
 
-  sendMQTT(21); //Update MQTT
+  sendMQTT(f); //Update MQTT
 
   //wait 5 before next cycle
   delay(1000);
