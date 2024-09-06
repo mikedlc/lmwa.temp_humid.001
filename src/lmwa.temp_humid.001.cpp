@@ -13,8 +13,8 @@
 /***************************************************************************************************************************/
 
 //Device Information
-const char* ProgramID = "LMWA.env.01";
-const char* SensorType = "LMWA.env.01";
+const char* ProgramID = "LMWA-env-01";
+const char* SensorType = "Environment";
 const char* mqtt_topic = "temperature/01";
 const char* mqtt_unit = "F";
 const char* mqtt_server_init = "192.168.12.165";
@@ -381,7 +381,7 @@ void sendMQTT(double mqtt_payload) {
   }
 
   unsigned long now = millis();
-  if (now - lastMsg > 2000) {
+  if (now - lastMsg > 10000) {
     lastMsg = now;
     ++value;
 
