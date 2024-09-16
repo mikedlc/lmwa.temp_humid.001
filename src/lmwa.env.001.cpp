@@ -13,7 +13,7 @@
 /***************************************************************************************************************************/
 
 //Device Information
-const char* ProgramID = "LMWA-env-01";
+const char* ProgramID = "LMWA.env.01";
 const char* SensorType = "Environment";
 const char* mqtt_topic = "temperature/01";
 const char* mqtt_unit = "F";
