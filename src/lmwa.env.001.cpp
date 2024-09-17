@@ -143,6 +143,7 @@ void setup() {
     delay(8000);
 
     if (WiFi.waitForConnectResult() != WL_CONNECTED){
+      Serial.println("WIFI NOT CONNECTED");
       return;
     }
 
@@ -381,7 +382,7 @@ void sendMQTT(double mqtt_payload) {
   }
 
   unsigned long now = millis();
-  if (now - lastMsg > 10000) {
+  if (now - lastMsg > 300000) {//send every 5 minutes
     lastMsg = now;
     ++value;
 
